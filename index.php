@@ -15,13 +15,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
-<body>
+<body style= "background-color: #0C1218; font-family: sans-serif;">
     
     <div id="app">
 
-        <div class="container py-5">
+        <nav class="navbar">
+            <div class="container" style= "background-color: #08131E">
+                <a class="navbar-brand" href="#">
+                <!-- <img src="" alt="Bootstrap" width="30" height="24"> -->
+                Immagine
+                </a>
+            </div>
+        </nav>  
+
+        <div class="container py-5" style="background-color: #202D3A;">
 
             <h1>Dischi</h1>
+
+            <ul>
+                <li v-for="disco in dischiList" class="text-white col-3">
+                    <img :src="disco.poster" alt="">
+                    <strong>{{disco.title}}</strong>
+                    <small>{{disco.author}}</small>
+                    <strong>{{disco.year}}</strong>
+                </li>
+            </ul>
 
             
 
