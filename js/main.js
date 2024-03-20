@@ -4,12 +4,19 @@ createApp({
     data() {
         return {
             dischiList: [],
+            discoIndex: [],
         }
     },
 
     methods: {
 
-
+        discInfo(index) { 
+            axios.get("./server.php").then(res => {
+                console.log(res.data[index]);
+    
+                this.discoIndex = res.data[index];
+            })
+        }
 
     },
 

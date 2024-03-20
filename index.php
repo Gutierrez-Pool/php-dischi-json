@@ -35,14 +35,24 @@
             <!-- <h1>Dischi</h1> -->
 
             <ul class="d-flex flex-wrap gap-5">
-                <li v-for="disco in dischiList" class="d-flex flex-column align-items-center gap-2 text-white">
+
+                <li v-for="(disco, index) in dischiList" @click="discInfo(index)" class="d-flex flex-column align-items-center gap-2 text-white">
+
                     <img :src="disco.poster" alt="" class="w-100">
                     <strong>{{disco.title}}</strong>
                     <small>{{disco.author}}</small>
                     <strong>{{disco.year}}</strong>
-                </li>
-            </ul>
 
+                </li>
+                
+            </ul>
+            
+            <div v-for="discoInfo in discoIndex">
+                <!-- <strong>{{index.title}}</strong>
+                <small>{{index.author}}</small>
+                <strong>{{index.year}}</strong> -->
+                {{discoInfo}}
+            </div>
             
 
         </div>
