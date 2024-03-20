@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dischi</title>
 
+    <link rel="stylesheet" href="./style.css">
+
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -22,19 +24,19 @@
         <nav class="navbar">
             <div class="container" style= "background-color: #08131E">
                 <a class="navbar-brand" href="#">
-                <!-- <img src="" alt="Bootstrap" width="30" height="24"> -->
-                Immagine
+                <!-- <img src="" alt="" width="30" height="24"> -->
+                Dischi
                 </a>
             </div>
         </nav>  
 
-        <div class="container py-5" style="background-color: #202D3A;">
+        <div class="container p-5" style="background-color: #202D3A;">
 
-            <h1>Dischi</h1>
+            <!-- <h1>Dischi</h1> -->
 
-            <ul>
-                <li v-for="disco in dischiList" class="text-white col-3">
-                    <img :src="disco.poster" alt="">
+            <ul class="d-flex flex-wrap gap-5">
+                <li v-for="disco in dischiList" class="d-flex flex-column align-items-center gap-2 text-white">
+                    <img :src="disco.poster" alt="" class="w-100">
                     <strong>{{disco.title}}</strong>
                     <small>{{disco.author}}</small>
                     <strong>{{disco.year}}</strong>
